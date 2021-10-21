@@ -1,6 +1,10 @@
-# finger_wrestling
+# Tapping Battle 
+To win the game, user have to tap as fast as possible. Each time replaying the game a random color will be assigned to each player
 
-A new Flutter project.
+![Screenshot_2021-10-22-02-52-46-524_com example finger_wrestling](https://user-images.githubusercontent.com/48752942/138357024-136a7a6a-1ba4-4ca9-8767-a4e884d345ed.jpg)
+
+
+<!-- A new Flutter project.
 
 ## Getting Started
 
