@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:finger_wrestling/main_page.dart';
-import 'package:flutter/services.dart';
+import 'package:finger_wrestling/pages/main_page.dart';
 import 'providers/wrestle_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:finger_wrestling/pages/score_page.dart';
 
 void main (){
   runApp(
@@ -15,23 +15,19 @@ void main (){
   );
 }
 
-
-// void main (){
-//   runApp(const WrestleApp());
-//   SystemChrome.setEnabledSystemUIOverlays([]);///hides the status bar in entire app
-//
-// }
-
-
-
 class WrestleApp extends StatelessWidget{
   const WrestleApp({Key? key}) : super(key: key);
 
   @override
   Widget build (BuildContext context){
-    return  const MaterialApp(
+    return   MaterialApp(
       debugShowCheckedModeBanner:  false,
-      home: MainPage(),
+      //home: MainPage(),
+       initialRoute: '/main_page',
+      routes: {
+        '/main_page' : (context) => const MainPage(),
+        '/score_page': (context) => const ScorePage(),
+      }
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class WrestleProvider with ChangeNotifier{
   late double _screenHeight;
-
+  Color? winnerColor;
   double get screenHeight => _screenHeight;
   late double topContainerHeight = _screenHeight/2;
 
@@ -12,17 +12,18 @@ class WrestleProvider with ChangeNotifier{
 
   void increaseTopHeight(){
     if(topContainerHeight<screenHeight){
-      topContainerHeight += 10;
+      topContainerHeight += 20;
     }
-    print(topContainerHeight);
     notifyListeners();
-
   }
   void decreaseTopHeight(){
     if(topContainerHeight>0) {
-      topContainerHeight -= 10;
+      topContainerHeight -= 20;
     }
-    print(topContainerHeight);
+    notifyListeners();
+  }
+  void replay (){
+    topContainerHeight = _screenHeight/2;
     notifyListeners();
   }
 
